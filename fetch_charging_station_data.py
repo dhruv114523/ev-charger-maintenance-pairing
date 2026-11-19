@@ -27,7 +27,6 @@ params = {
     "verbose": "false",
     "key": API_KEY,
 }
-print(f"Using API key starting {API_KEY[:4]}... (length {len(API_KEY)})")
 
 print("Querying Open Charge Map...")
 response = requests.get(API_URL, params=params, timeout=120)

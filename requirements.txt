@@ -1,0 +1,7 @@
+osmnx
+pandas
+requests
+python-dotenv
+numpy
+networkx
+scikit-learn
