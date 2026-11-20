@@ -2,6 +2,10 @@
 
 This project pairs EV charging stations in Klang Valley into small maintenance teams based on road distance. It downloads the local road network, fetches charging station locations from Open Charge Map, and assigns nearby stations to teams with a maximum of two stations per team.
 
+## How It Works
+
+The scripts use the local road network rather than straight-line distance. Each station is snapped to the nearest road node, and stations connected by a 2 km or shorter driving route are grouped together using complete-link clustering. Oversized clusters are split into smaller teams so no team contains more than two stations; the final assignments include station IDs and team sizes.
+
 ## Data Flow
 
 1. `download_map_data.py` downloads and saves the Klang Valley driving network.
